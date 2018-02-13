@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biodata</title>
+<style>
+</style>
+</head>
+<body>
+<h1><center>Biodata</center></h1>
+        <fieldset>
+                <legend>Personal Data</legend>
+                <form name="myform">
+                <p>
+                    <label for="nama">Nama:</label>
+                    <input type="text" name="nama">
+                </p>
+                <p>
+                    <label for="tempat">Tempat Tanggal Lahir:</label>
+                    <input type="text" name="tempat">
+                    <input type="text" name="tempat1" placeholder="dd/mm/yyyy">
+                </p>
+                <p>
+                    <label for="sex">Gender:</label>
+                    <input type="radio" name='sex' onclick="fungsiKu1(this.value)"value='Pria'>
+                    Pria
+                    <input type="radio" name='sex' onclick="fungsiKu1(this.value)"value='Wanita'>
+                    Wanita
+                </p>
+                <p>
+                    <label for="phone">Phone:</label>
+                    <input type="text" name="phone">
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                </p>
+                </form>    
+                </fieldset>
+                
+                <fieldset>
+                <legend>Pendidikan</legend>
+                <form name="myform1">
+                <p>
+                    <label for="sekolahd">SD:</label>
+                    <input type="text" name="sekolahd">
+                </p>
+                <p>
+                    <label for="sekolahmp">SMP:</label>
+                    <input type="text" name="sekolahmp">
+                </p>
+                <p>
+                    <label for="sekolahma">SMA:</label>
+                    <input type="text" name="sekolahma">
+                </p>
+                <p>
+                    <label for="sarjana">S1:</label>
+                    <input type="text" name="sarjana">
+                </p>
+                </form>    
+                </fieldset>
+                <fieldset>
+                <legend>Pekerjaan</legend>
+                <form name="myform2">
+                <p>
+                    <label for="perusahaan">Nama perusahaan:</label>
+                    <span><input type="text" name="perusahaan"></span>
+                </p>
+                <p>
+                    <label for="job">Lama Bekerja:</label>
+                    <span><input type="text" name="job"></span>
+        </p>
+        <p>
+                    <label for="posisi">Posisi:</label>
+                    <span><input type="text" name="posisi"></span>
+        </p>
+    </form>
+    </fieldset>
+    <center>
+            <button onclick="fungsiKu()">Submit</button>
+            <h1>Curiculum Vitae</h1>
+            <table>
+                <tr bgcolor="#00cc99">
+                    <td colspan="2">Jakarta</td>
+                </tr>
+                <tr>
+                    <td>Nama:</td>
+                    <td id="a1"></td>
+                </tr>
+                <tr>
+                    <td>Tempat Tanggal Lahir:</td>
+                    <td id="a2"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td id="a3"></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td id="a4"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td id="a5"></td>
+                </tr>
+                <tr bgcolor="#00cc99">
+                        <td colspan="2">Pendidikan</td>
+                    </tr>
+                    <tr>
+                        <td>SD:</td>
+                        <td id="b1"></td>
+                    </tr>
+                    <tr>
+                        <td>SMP:</td>
+                        <td id="b2"></td>
+                    </tr>
+                    <tr>
+                        <td>SMA:</td>
+                        <td id="b3"></td>
+                    </tr>
+                    <tr>
+                        <td>S1:</td>
+                        <td id="b4"></td>
+                    </tr>
+                    <tr bgcolor="#00cc99">
+                            <td colspan="2">Pekerjaan</td>
+                        </tr>
+                        <tr>
+                            <td>Nama Perusahaan:</td>
+                            <td id="c1"></td>
+                        </tr>
+                        <tr>
+                            <td>Lama Bekerja:</td>
+                            <td id="c2"></td>
+                        </tr>
+                        <tr>
+                            <td>Posisi:</td>
+                            <td id="c3"></td>
+                        </tr>
+                       
+            </table>
+    </center>
+    
+
+
+
+<script>
+function fungsiKu(){
+    event.preventDefault();
+    var nama = document.myform.nama.value;
+    var tempat = document.myform.tempat.value;
+    var tempat1 = document.myform.tempat1.value;
+    var sex = document.myform.sex.value;
+    var phone = document.myform.phone.value;
+    var email = document.myform.email.value;
+    var sekolahd = document.myform1.sekolahd.value;
+    var sekolahmp = document.myform1.sekolahmp.value;
+    var sekolahma = document.myform1.sekolahma.value;
+    var sarjana = document.myform1.sarjana.value;
+    var perusahaan = document.myform2.perusahaan.value;
+    var job = document.myform2.job.value;
+    var posisi = document.myform2.posisi.value;
+
+    document.getElementById("a1").innerHTML = nama
+    document.getElementById("a2").innerHTML = tempat + ", " + tempat1
+    document.getElementById("a3").innerHTML = sex
+    document.getElementById("a4").innerHTML = phone
+    document.getElementById("a5").innerHTML = email
+    document.getElementById("b1").innerHTML = sekolahd
+    document.getElementById("b2").innerHTML = sekolahmp
+    document.getElementById("b3").innerHTML = sekolahma
+    document.getElementById("b4").innerHTML = sarjana
+    document.getElementById("c1").innerHTML = perusahaan
+    document.getElementById("c2").innerHTML = job
+    document.getElementById("c3").innerHTML = posisi
+                    
+
+}
+    
+</script>
+</body>
+</html>
